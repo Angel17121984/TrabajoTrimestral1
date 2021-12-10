@@ -1,0 +1,85 @@
+<html>
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foto Responsive de un Gato</title>
+        <style>
+                body{
+                    background-color:red;
+                    
+                }
+            #portaFoto {
+                width: 50vw;
+                height: 50vh;
+                background-color:red;
+                display: block;
+                margin:auto;
+            }
+
+            #marco{
+                display: flex;
+                align-items:center;
+                align-content:center;
+            
+            }
+            #marco{
+                    width: 100%;
+                    height: 100%;
+                    }
+
+
+            #laFoto {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+    
+        
+    
+            @media screen and (orientation:landscape) {
+                #portaFoto {
+                    max-width: 1920px;
+                    max-height: 1280px;
+                }
+            }
+    
+            @media screen and (orientation:portrait) {
+                #portaFoto {
+                    max-width: 600px;
+                    max-height: 1200px;
+                    justify-items: center;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id=marco>
+            <picture id="portaFoto">
+
+                <source media="(orientation: landscape) and (min-width: 1201px)" srcset="2-HW1920px.webp"type="image/webp">
+                <source media="(orientation: landscape) and (min-width: 1201px)" srcset="2-HW1920px.heic"type="image/heic">
+                <source media="(orientation: landscape) and (min-width: 1201px)" srcset="2.jpg" type="image/jpeg">
+                <source media="(orientation: portrait) and (min-width:601px)" srcset="4-W1200px.webp" type="image/webp">
+                <source media="(orientation: portrait) and (min-width:601px)" srcset="4-W1200px.heic" type="image/heic">
+                <source media="(orientation: portrait) and (min-width:601px)" srcset="4.jpg" type="image/jpg">
+                <source media="(orientation: landscape) and (min-width: 501px)" srcset="1-HW800px.webp"type="image/webp">
+                <source media="(orientation: landscape) and (min-width: 501px)" srcset="1-HW800px.heic"type="image/heic">
+                <source media="(orientation: landscape) and (min-width: 501px)" srcset="1jpg" type="image/jpeg">
+                <source media="(orientation: portrait) and (min-width:101px)" srcset="3-W600px.webp" type="image/webp">
+                <source media="(orientation: portrait) and (min-width:101px)" srcset="3-W600px.heic" type="image/heic">
+                <source media="(orientation: portrait) and (min-width:101px)" srcset="3.jpg" type="image/jpg">
+            
+
+                <img id="laFoto" alt="Ary" src="./1.jpg"/>
+            </picture>
+        </div>
+        
+    
+    
+    </body>
+
+</html>
